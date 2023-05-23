@@ -35,7 +35,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 10rem 20% 2rem;
 }
 
 .header {
@@ -43,7 +43,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 9%;
+  padding: 2rem 20%;
   background: var(--bg-color);
   display: flex;
   justify-content: space-between;
@@ -86,7 +86,7 @@ section {
 }
 
 .home-img img {
-  width: 40vw;
+  width: 20vw;
   animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -125,6 +125,8 @@ span {
 
 .home-content p {
   font-size: 1.6rem;
+  width: 39vw;
+  min-width: 100%;
 }
 
 .social-media a {
@@ -175,7 +177,7 @@ span {
 }
 
 .about-img img {
-  width: 30vw;
+  width: 16vw;
 }
 
 .heading {
