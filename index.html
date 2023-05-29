@@ -34,27 +34,45 @@
 
     <!-- home section design -->
     <section class="home" id="home">
-      <div class="home-content">
-        <h3>Hello, It's Me</h3>
-        <h1>Milen Minchev</h1>
-        <h3>And I'm a <span class="multiple-text"></span></h3>
-        <p>
-          Want to enhance your online presence? Whether it's store setup,
-          website migration, customization, or adding exciting features, let's
-          chat! Together, we'll bring your ideas to life and create a standout
-          website. Let's get started on this exciting journey towards making
-          your vision a reality!
-        </p>
-        <div class="social-media">
-          <a href="#"><i class="bx bxl-github"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
+      <div class="home-top">
+        <div class="home-content">
+          <h3>Hello, It's Me</h3>
+          <h1>Milen Minchev</h1>
+          <h3>And I'm a <span class="multiple-text"></span></h3>
+          <p>
+            Want to enhance your online presence? Whether it's store setup,
+            website migration, customization, or adding exciting features, let's
+            chat! Together, we'll bring your ideas to life and create a standout
+            website. Let's get started on this exciting journey towards making
+            your vision a reality!
+          </p>
+          <div class="social-media">
+            <a href="https://github.com/boildeg"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a href="https://linkedin.com/in/tech-milenminchev"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </div>
+          <a href="#contact" class="btn">Let's Work Together</a>
+          <a href="#" class="btn">Download CV</a>
         </div>
-        <a href="#" class="btn">Let's Work Together</a>
-        <a href="#" class="btn">Download CV</a>
+        <div class="home-img">
+          <img src="images/m-vector.png" alt="" />
+        </div>
       </div>
 
-      <div class="home-img">
-        <img src="images/m-vector.png" alt="" />
+      <div
+        id="videoHome"
+        class="introVideo"
+        style="position: relative; width: 100%; padding-bottom: 50.25%"
+      >
+        <iframe
+          class="videoIframe"
+          src="https://www.youtube.com/embed/M-fZKuQRMK0"
+          title="YouTube video player"
+          allowfullscreen=""
+        ></iframe>
       </div>
     </section>
 
@@ -81,7 +99,7 @@
           challenges and contribute to exciting projects. Let's connect and
           create something amazing together!
         </p>
-        <a href="#" class="btn">Let's Build Together</a>
+        <a href="#contact" class="btn">Let's Build Together</a>
       </div>
     </section>
 
@@ -234,18 +252,18 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form name="contact" method="POST" netlify>
+        <input type="hidden" name="form-name" value="contact" />
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input type="text" name="name" placeholder="Full Name" />
+          <input type="email" name="email" placeholder="Email Address" />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject" />
+          <input type="tel" name="phone" placeholder="Mobile Number" />
+          <input type="text" name="subject" placeholder="Email Subject" />
         </div>
         <textarea
-          name=""
-          id=""
+          name="message"
           cols="30"
           rows="10"
           placeholder="Your Message"

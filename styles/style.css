@@ -12,7 +12,7 @@
 }
 
 :root {
-  --bg-color: #1f242d;
+  --bg-color: #1c2028;
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
@@ -78,11 +78,19 @@ section {
   color: var(--text-color);
   display: none;
 }
+.home-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
 
 .home {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .home-img img {
@@ -152,7 +160,7 @@ span {
 
 .btn {
   display: inline-block;
-  padding: 1rem 2.8rem;
+  padding: 1rem 2.3rem;
   background: var(--main-color);
   border-radius: 4rem;
   box-shadow: 0 0 1rem var(--main-color);
@@ -168,12 +176,30 @@ span {
   box-shadow: none;
 }
 
+.introVideo {
+  margin-top: 10rem;
+}
+
+.videoIframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 777px;
+  max-height: 421px;
+  transform: translate(50%, -50%);
+  right: 50%;
+  top: 50%;
+  box-shadow: 0 0 2rem var(--main-color);
+  border-radius: 5px;
+}
+
 .about {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   background: var(--second-bg-color);
+  min-height: 50vh;
 }
 
 .about-img img {
@@ -458,8 +484,18 @@ span {
     margin: 3rem 0;
   }
 
-  .home {
+  .home-top {
     flex-direction: column;
+  }
+  .home-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .introVideo {
+    margin-top: 5rem;
   }
 
   .home-content h3 {
@@ -482,6 +518,15 @@ span {
   .about img {
     width: 70vw;
     margin-top: 4rem;
+  }
+
+  .services-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
   }
 }
 

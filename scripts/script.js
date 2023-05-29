@@ -50,8 +50,10 @@ ScrollReveal().reveal(
   ".home-img, .services-container, .portfolio-box, .contact form",
   { origin: "bottom" }
 );
-ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
-ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+ScrollReveal().reveal(".home-content h1, .about-img, .introVideo", {
+  origin: "left",
+});
+ScrollReveal().reveal(".home-content p, .about-content", { origin: "top" });
 
 /*==================== typed js ====================*/
 const typed = new Typed(".multiple-text", {
@@ -61,3 +63,20 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
+
+document.querySelector("form").addEventListener("submit", handleSubmit);
